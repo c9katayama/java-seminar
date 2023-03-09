@@ -9,6 +9,12 @@ import javassist.ClassPool;
 import javassist.CtClass;
 import javassist.CtMethod;
 
+/**
+ * premainで、全メソッドの前後にSystem.out.println()を追加するAgentサンプル
+ * 
+ * @author yaman
+ *
+ */
 public class InstrumentAgent {
   // mainメソッドの前に呼び出される
   public static void premain(String agentArgs, Instrumentation instrumentation) {

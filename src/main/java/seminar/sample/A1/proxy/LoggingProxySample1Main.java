@@ -28,5 +28,4 @@ public class LoggingProxySample1Main {
     int[] result = cashflow.getCashflow(person);
     cashflow.saveCashflow(person, result);
   }
-
 }
