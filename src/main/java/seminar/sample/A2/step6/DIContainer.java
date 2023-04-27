@@ -11,6 +11,13 @@ import com.google.gson.JsonObject;
 
 public class DIContainer {
 
+  private Map<String, JsonObject> beanConfigMap = new ConcurrentHashMap<>();
+  private Map<String, Object> beanInstanceMap = new ConcurrentHashMap<>();
+
+  private static final String CONFIG_CLASS = "class";
+  private static final String CONFIG_AUTOWIRED = "autoWired";
+  private static final String CONFIG_CONSTRUCTOR_ARG_PREFIX = "constructor-arg";
+
   public DIContainer(String configFile) {
     init(configFile);
   }
@@ -26,17 +33,11 @@ public class DIContainer {
 
   }
 
-  private Map<String, JsonObject> beanConfigMap = new ConcurrentHashMap<>();
-  private Map<String, Object> beanInstanceMap = new ConcurrentHashMap<>();
-
   public <T> T getBean(Class<T> clazz) {
     return getBean(clazz.getSimpleName());
   }
 
-  private static final String CONFIG_CLASS = "class";
-  private static final String CONFIG_AUTOWIRED = "autoWired";
-  private static final String CONFIG_CONSTRUCTOR_ARG_PREFIX = "constructor-arg";
-
+  @SuppressWarnings("unchecked")
   public <T> T getBean(String beanName) {
     Object bean = beanInstanceMap.computeIfAbsent(beanName, (n) -> createBeanInstance(n));
     return (T) bean;
