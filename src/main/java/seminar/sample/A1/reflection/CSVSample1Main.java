@@ -2,6 +2,12 @@ package seminar.sample.A1.reflection;
 
 import java.time.LocalDate;
 
+/**
+ * CSVを作成するサンプル(Personクラスにしか使えない実装)
+ * 
+ * @author yaman
+ *
+ */
 public class CSVSample1Main {
 
   public static void main(String[] args) {

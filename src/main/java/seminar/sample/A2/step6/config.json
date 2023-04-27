@@ -1,0 +1,20 @@
+{
+	"CashFlowChartBuilder":{
+		"class":"seminar.sample.A2.step5.CashFlowChartBuilder",
+		"autoWired":true
+	},
+	
+	"IJobIncomeCalc" :{
+		"class":"seminar.sample.A2.step5.impl.CAPJobIncomeCalc",
+		"constructor-arg0":"incomeStatistic.csv"
+	},
+	"IChart" :{
+		"class":"seminar.sample.A2.step5.impl.LineChart",
+		"constructor-arg0":100,
+		"constructor-arg1":200
+	},	
+	"IImageGenerator" :{
+		"class":"seminar.sample.A2.step5.impl.JpegImageGenerator",
+		"constructor-arg0":"incomeChart.jpg"
+	}
+}

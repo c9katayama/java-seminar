@@ -3,9 +3,15 @@ package seminar.sample.A1.reflection;
 import java.lang.reflect.Field;
 import java.time.LocalDate;
 
+/**
+ * リクレクションを使って、インスタンスから値を取得するサンプル
+ * 
+ * @author yaman
+ *
+ */
 public class ReflectionSample3Main {
   public static void main(String[] args) throws Exception {
-    //Personをインスタンス化
+    // Personをインスタンス化
     Person person = new Person();
     person.name = "katayama";
     person.age = 46;

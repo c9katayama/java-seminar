@@ -5,7 +5,7 @@ import seminar.sample.A1.reflection.Person;
 import seminar.sample.util.Utils;
 
 /**
- * Cashflowの実装クラス
+ * Cashflowの実装クラス(ファイルベースで保存/取得する)
  * 
  * @author yaman
  *

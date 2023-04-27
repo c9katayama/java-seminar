@@ -1,7 +1,11 @@
 package seminar.sample.A1.instrument;
 
 /**
+ * Instrumentのサンプル
+ * 
+ * <pre>
  * VM argumentに -javaagent:build/libs/java-seminar.jar を設定してから実行
+ * </pre>
  */
 public class InstrumentSample1Main {
 

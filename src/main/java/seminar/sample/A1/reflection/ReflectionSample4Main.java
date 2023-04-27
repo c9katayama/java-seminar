@@ -2,6 +2,12 @@ package seminar.sample.A1.reflection;
 
 import java.lang.reflect.Method;
 
+/**
+ * リクレクション利用のサンプル(publicメソッドを取得して、メソッド呼び出し）
+ * 
+ * @author yaman
+ *
+ */
 public class ReflectionSample4Main {
   public static void main(String[] args) throws Exception {
     // Carをインスタンス化

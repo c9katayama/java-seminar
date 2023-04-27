@@ -2,6 +2,12 @@ package seminar.sample.A1.reflection;
 
 import java.lang.reflect.Field;
 
+/**
+ * リクレクション利用のサンプル(privateフィールド含めて取得）
+ * 
+ * @author yaman
+ *
+ */
 public class ReflectionSample2Main {
 
   public static void main(String[] args) {

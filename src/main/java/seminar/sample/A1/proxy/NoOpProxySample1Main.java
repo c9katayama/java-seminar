@@ -4,6 +4,12 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Proxy;
 import seminar.sample.A1.reflection.Person;
 
+/**
+ * 何もしないInvocationHandlerを使って、Proxy経由でインスタンスを作成するサンプル
+ * 
+ * @author yaman
+ *
+ */
 public class NoOpProxySample1Main {
 
   public static void main(String[] args) {

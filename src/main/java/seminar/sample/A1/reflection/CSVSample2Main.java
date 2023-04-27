@@ -2,9 +2,13 @@ package seminar.sample.A1.reflection;
 
 import java.lang.reflect.Field;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
+/**
+ * CSVを作成するサンプル(さまざまなクラスに使える、リフレクションを用いた実装)
+ * 
+ * @author yaman
+ *
+ */
 public class CSVSample2Main {
 
   public static void main(String[] args) throws Exception {
@@ -20,7 +24,7 @@ public class CSVSample2Main {
   public String toCSV(Object target) throws Exception {
     StringBuilder csv = new StringBuilder();
     // フィールドを取得
-    Field[] fields = getFieldsForCSV(target);
+    Field[] fields = target.getClass().getFields();
     // CSVヘッダーを追加
     for (int i = 0; i < fields.length; i++) {
       if (i != 0) {
@@ -40,18 +44,5 @@ public class CSVSample2Main {
       csv.append(value.toString());// フィールドのデータ
     }
     return csv.toString();
-  }
-
-  private Field[] getFieldsForCSV(Object target) {
-    Field[] fields = target.getClass().getFields();
-    List<Field> targetFieldList = new ArrayList<>();
-    for (Field field : fields) {
-      // Ignoreアノテーションがついていたら無視する
-      Ignore annotation = field.getAnnotation(Ignore.class);
-      if (annotation == null) {
-        targetFieldList.add(field);
-      }
-    }
-    return targetFieldList.toArray(new Field[] {});
   }
 }
