@@ -39,4 +39,12 @@ public class Utils {
     }
     return Arrays.asList(line.split(",")).stream().mapToInt(s -> Integer.parseInt(s)).toArray();
   }
+
+  public static byte[] readBytes(String path) {
+    try {
+      return Files.readAllBytes(new File(path).toPath());
+    } catch (IOException e) {
+      throw new RuntimeException(path);
+    }
+  }
 }
