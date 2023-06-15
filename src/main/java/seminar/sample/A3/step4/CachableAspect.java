@@ -25,8 +25,8 @@ public class CachableAspect {
       return new ConcurrentHashMap<>();
     });
     // メソッド引数から、キャッシュ用のキーを取得
-    String keyFromParams = Arrays.asList(methodSignature.getMethod().getParameters()).stream()
-        .map(o -> o.toString()).collect(Collectors.joining("_"));
+    String keyFromParams = Arrays.asList(joinPoint.getArgs()).stream().map(o -> o.toString())
+        .collect(Collectors.joining("_"));
     // キャッシュ用のキーから、キャッシュを取得。なければメソッドを呼び出してキャッシュ用の値を生成
     Object cacheValue = cache.computeIfAbsent(keyFromParams, (key) -> {
       try {
