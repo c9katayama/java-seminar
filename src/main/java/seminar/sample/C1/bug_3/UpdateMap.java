@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.IntStream;
 
-public class Update {
+public class UpdateMap {
 
   public static void main(String[] args) {
-    new Update().sample();
+    new UpdateMap().sample();
   }
 
   Map<String, String> cacheMap = Collections.synchronizedMap(new HashMap<>());
