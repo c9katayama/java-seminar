@@ -47,4 +47,12 @@ public class Utils {
       throw new RuntimeException(path);
     }
   }
+
+  public static void sleep(int millis) {
+    try {
+      Thread.sleep(millis);
+    } catch (InterruptedException e) {
+      throw new RuntimeException(e);
+    }
+  }
 }
