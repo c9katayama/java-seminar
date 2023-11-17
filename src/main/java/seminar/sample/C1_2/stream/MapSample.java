@@ -15,7 +15,7 @@ public class MapSample {
       List<String> list = Arrays.asList("apple", "banana", "cherry");
 
       // 大文字に変換
-      List<String> flatList = list.stream().map(s -> s.toLowerCase()).collect(Collectors.toList());
+      List<String> flatList = list.stream().map(s -> s.toUpperCase()).collect(Collectors.toList());
 
       System.out.println(flatList); // [APPLE, BANANA, CHERRY]
     }
@@ -46,8 +46,8 @@ public class MapSample {
     List<String> list = Arrays.asList("apple", "banana", "cherry");
     List<String> newList = new ArrayList<>();
     for(String s : list) {
-      newList.add(s.toLowerCase());      
+      newList.add(s.toUpperCase());      
     }
     return newList;
   }
-} 
+}
