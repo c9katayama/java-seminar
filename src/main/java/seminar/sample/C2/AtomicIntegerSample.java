@@ -1,4 +1,4 @@
-package seminar.sample.C3;
+package seminar.sample.C2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
