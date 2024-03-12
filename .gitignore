@@ -3,3 +3,5 @@
 /.project
 /.gradle
 /.settings
+/.factorypath
+/.apt_generated/
