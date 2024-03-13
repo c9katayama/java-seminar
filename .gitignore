@@ -7,3 +7,4 @@
 /.apt_generated/
 /videos/
 .DS_Store
+/build/
