@@ -5,3 +5,5 @@
 /.settings
 /.factorypath
 /.apt_generated/
+/videos/
+.DS_Store
