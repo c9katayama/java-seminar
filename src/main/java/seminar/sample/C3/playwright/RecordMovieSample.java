@@ -18,7 +18,6 @@ public class RecordMovieSample {
 			// ブラウザコンテキストの設定で動画記録のオプションを指定
 			Browser.NewContextOptions options = new Browser.NewContextOptions();
 			options.setRecordVideoDir(Paths.get("videos/"));
-			options.setRecordVideoSize(1024, 1024);
 			BrowserContext context = browser.newContext(options);
 
 			// コンテキストからページを作成
